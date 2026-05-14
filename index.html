@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan Francisco Sigala Cardona | Portafolio Profesional</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <img src="assets/images/pfp.png" 
+             alt="Foto de perfil de Alan Francisco Sigala Cardona" 
+             width="150" 
+             height="150">
+        <h1>Alan Francisco Sigala Cardona</h1>
+        <p>Estudiante de Ingeniería en Sistemas Electrónicos Inteligentes</p>
+    </header>
+
+    <nav aria-label="Navegación principal">
+        <ul>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#formacion">Formación Académica</a></li>
+            <li><a href="#tecnologias">Tecnologías</a></li>
+            <li><a href="#habilidades">Habilidades Blandas</a></li>
+            <li><a href="#intereses">Intereses</a></li>
+            <li><a href="#idiomas">Idiomas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- SOBRE MI -->
+        <section id="sobre-mi" aria-labelledby="titulo-sobre-mi">
+            <h2 id="titulo-sobre-mi">Sobre mí</h2>
+            <article>
+                <p>
+                    Soy estudiante de la carrera de Sistemas Electrónicos Inteligentes en la Universidad Autónoma 
+                    de Ciudad Juárez (UACJ). Mi formación combina fundamentos de sistemas digitales con una 
+                    orientación práctica hacia el diseño de hardware, simulación de circuitos y desarrollo de 
+                    soluciones embebidas. Me apasiona el desarrollo de proyectos electrónicos, los sistemas 
+                    embebidos y la descripción de hardware por comportamiento utilizando lenguajes como Verilog 
+                    y VHDL. También tengo un fuerte interés por la programación, la electrónica en general, la 
+                    electricidad y la reparación de equipos electrónicos. Busco constantemente oportunidades 
+                    para aplicar mis conocimientos en proyectos reales que me permitan seguir aprendiendo y 
+                    creciendo profesionalmente.
+                </p>
+            </article>
+        </section>
+
+        <!-- FORMACIÓN ACADÉMICA -->
+        <section id="formacion" aria-labelledby="titulo-formacion">
+            <h2 id="titulo-formacion">Formación Académica</h2>
+            <ol>
+                <li>
+                    <strong>Sistemas Digitales y Comunicaciones</strong><br>
+                    Universidad Autónoma de Ciudad Juárez (UACJ)<br>
+                    2022 – 2024 | 5 semestres cursados<br>
+                    <em>Materias revalidadas al nuevo plan de estudios.</em>
+                </li>
+                <li>
+                    <strong>Sistemas Electrónicos Inteligentes</strong><br>
+                    Universidad Autónoma de Ciudad Juárez (UACJ)<br>
+                    2024 – Actualidad | 6.º semestre en curso<br>
+                    <em>Nuevo programa académico orientado a electrónica inteligente y sistemas embebidos.</em>
+                </li>
+            </ol>
+        </section>
+
+        <!-- TECNOLOGÍAS -->
+        <section id="tecnologias" aria-labelledby="titulo-tecnologias">
+            <h2 id="titulo-tecnologias">Tecnologías y Herramientas</h2>
+            
+            <dl>
+                <dt>Lenguajes de Descripción de Hardware</dt>
+                <dd>Verilog, VHDL</dd>
+
+                <dt>Simulación de Circuitos</dt>
+                <dd>LTSpice, Multisim</dd>
+
+                <dt>Desarrollo de Software</dt>
+                <dd>C++, Python</dd>
+
+                <dt>Herramientas de Desarrollo</dt>
+                <dd>Visual Studio Code</dd>
+
+                <dt>Sistemas Operativos</dt>
+                <dd>Windows, Ubuntu (Linux)</dd>
+
+                <dt>Ofimática</dt>
+                <dd>Microsoft Office: Word, Excel, PowerPoint</dd>
+
+                <dt>Electrónica General</dt>
+                <dd>Diseño, simulación y prototipado de circuitos electrónicos</dd>
+            </dl>
+        </section>
+
+        <!-- HABILIDADES BLANDAS -->
+        <section id="habilidades" aria-labelledby="titulo-habilidades">
+            <h2 id="titulo-habilidades">Habilidades Blandas</h2>
+            <ul>
+                <li>Trabajo en equipo</li>
+                <li>Liderazgo</li>
+                <li>Resolución de problemas</li>
+                <li>Responsabilidad laboral</li>
+            </ul>
+        </section>
+
+        <!-- INTERESES -->
+        <section id="intereses" aria-labelledby="titulo-intereses">
+            <h2 id="titulo-intereses">Intereses Profesionales</h2>
+            <ul>
+                <li>Desarrollo de proyectos electrónicos</li>
+                <li>Sistemas embebidos</li>
+                <li>Descripción de hardware por comportamiento (Verilog, VHDL)</li>
+                <li>Programación</li>
+                <li>Electrónica en general</li>
+                <li>Electricidad</li>
+                <li>Reparación de equipos electrónicos</li>
+            </ul>
+        </section>
+
+        <!-- IDIOMAS -->
+        <section id="idiomas" aria-labelledby="titulo-idiomas">
+            <h2 id="titulo-idiomas">Idiomas</h2>
+            <ul>
+                <li><strong>Español:</strong> Nativo</li>
+                <li><strong>Inglés:</strong> Nivel C1 (Avanzado)</li>
+            </ul>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto" aria-labelledby="titulo-contacto">
+            <h2 id="titulo-contacto">Contacto</h2>
+            
+            <p>¿Tienes un proyecto o propuesta? Escríbeme.</p>
+
+            <form action="#" method="post" novalidate>
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" required>
+                </div>
+
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Alan Francisco Sigala Cardona — UACJ</p>
+        <p>
+            <a href="mailto:al236005@alumnos.uacj.mx">al236005@alumnos.uacj.mx</a> | 
+            <a href="https://github.com/AlanPandaSK" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </p>
+    </footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>

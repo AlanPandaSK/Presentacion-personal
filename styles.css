@@ -1,0 +1,602 @@
+
+
+:root {
+    /* paleta de colores */
+    --color-bg: #0a0e14;
+    --color-bg-secondary: #12171f;
+    --color-bg-card: #181e28;
+    --color-text: #e0e0e0;
+    --color-text-secondary: #a0a8b8;
+    --color-accent: #00e5ff;
+    --color-accent-hover: #00b8d4;
+    --color-warning: #ffb74d;
+    --color-success: #69f0ae;
+    --color-border: #1c2533;
+    --color-trace: #2a3545;
+    --color-glow: #00e5ff33;
+
+    /* Tipografias */
+    --font-main: 'Fira Code', 'JetBrains Mono', 'Cascadia Code', 'Consolas', monospace;
+    --font-headings: 'Fira Code', 'JetBrains Mono', monospace;
+
+    /* Espaciado consistente */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+
+    /* Bordes decorativos */
+    --border-trace: 2px solid var(--color-trace);
+    --border-radius: 4px;
+    --border-radius-circle: 50%;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.7;
+    background-image:
+        radial-gradient(circle at 20% 30%, var(--color-trace) 1px, transparent 1px),
+        radial-gradient(circle at 80% 70%, var(--color-trace) 1px, transparent 1px),
+        radial-gradient(circle at 50% 50%, var(--color-glow) 0.5px, transparent 0.5px);
+    background-size: 60px 60px, 80px 80px, 40px 40px;
+    background-position: 0 0, 15px 20px, 25px 10px;
+}
+
+
+h1, h2, h3 {
+    font-family: var(--font-headings);
+    color: var(--color-accent);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 1px dashed var(--color-trace);
+}
+
+h2::before {
+    content: "> ";
+    color: var(--color-success);
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-accent-hover);
+    text-shadow: 0 0 8px var(--color-accent);
+}
+
+body > header {
+    text-align: center;
+    padding: var(--spacing-lg) var(--spacing-md);
+    background-color: var(--color-bg-secondary);
+    border-bottom: var(--border-trace);
+    position: relative;
+}
+
+body > header::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: var(--border-radius-circle);
+    background-color: var(--color-accent);
+    box-shadow: 0 0 10px var(--color-accent);
+    top: 15px;
+    left: 15px;
+}
+
+body > header::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: var(--border-radius-circle);
+    background-color: var(--color-accent);
+    box-shadow: 0 0 10px var(--color-accent);
+    bottom: 15px;
+    right: 15px;
+}
+
+body > header img {
+    max-width: 150px;
+    height: auto;
+    border-radius: var(--border-radius-circle);
+    border: 2px solid var(--color-trace);
+    box-shadow: 0 0 15px var(--color-glow);
+    margin-bottom: var(--spacing-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body > header img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--color-accent);
+}
+
+body > header p {
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+}
+
+nav {
+    background-color: var(--color-bg-secondary);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-bottom: var(--border-trace);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+nav ul li a:hover {
+    border-color: var(--color-accent);
+    background-color: var(--color-glow);
+    text-shadow: 0 0 8px var(--color-accent);
+}
+
+nav ul li a::before {
+    content: "~/";
+    color: var(--color-success);
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+section {
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background-color: var(--color-trace);
+}
+
+section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 20px;
+    background-color: var(--color-trace);
+}
+
+section p {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text-secondary);
+}
+
+section strong {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+section em {
+    color: var(--color-warning);
+    font-style: normal;
+}
+
+/* Lista ordenada formacion academica */
+
+ol {
+    padding-left: 1.5rem;
+    counter-reset: step-counter;
+}
+
+ol li {
+    position: relative;
+    padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm) var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    border-left: 2px solid var(--color-trace);
+    list-style: none;
+    counter-increment: step-counter;
+}
+
+ol li::before {
+    content: "[" counter(step-counter) "]";
+    position: absolute;
+    left: -1.8rem;
+    top: 1rem;
+    color: var(--color-accent);
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+/* Lista ordenada tecnologias */
+
+dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.75rem var(--spacing-md);
+}
+
+dl dt {
+    color: var(--color-accent);
+    font-weight: 600;
+    text-align: right;
+    padding: var(--spacing-xs);
+    border-right: 1px solid var(--color-trace);
+}
+
+dl dt::after {
+    content: ":";
+}
+
+dl dd {
+    padding: var(--spacing-xs);
+    color: var(--color-text-secondary);
+}
+
+/* Listas no ordenadas Habilidades, intereses, idiomas */
+
+section ul,
+footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+section ul li,
+footer ul li {
+    padding: 0.4rem 0 0.4rem 1.5rem;
+    position: relative;
+}
+
+section ul li::before,
+footer ul li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: var(--color-success);
+    font-weight: bold;
+}
+
+/* Formulario */
+
+form div {
+    margin-bottom: var(--spacing-sm);
+}
+
+form label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-accent);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+form label::before {
+    content: "$ ";
+    color: var(--color-success);
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    border: 1px solid var(--color-trace);
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 12px var(--color-glow);
+}
+
+form input[type="text"]:hover,
+form input[type="email"]:hover,
+form textarea:hover {
+    border-color: var(--color-accent-hover);
+}
+
+form button {
+    padding: 0.75rem 2rem;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: transparent;
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+
+form button:hover {
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    box-shadow: 0 0 20px var(--color-glow);
+}
+
+form button:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+footer {
+    text-align: center;
+    padding: var(--spacing-md);
+    background-color: var(--color-bg-secondary);
+    border-top: var(--border-trace);
+    color: var(--color-text-secondary);
+    font-size: 0.85rem;
+}
+
+footer p {
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Estilos para los elementos js */
+
+/* Boton claro oscuro */
+
+#theme-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 0.4rem 0.8rem;
+    font-family: var(--font-main);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: transparent;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    box-shadow: 0 0 12px var(--color-glow);
+}
+
+/* Boton hamburguesa */
+
+#hamburger-menu {
+    display: none;                /* Oculto por defecto (escritorio) */
+    background: transparent;
+    border: 1px solid var(--color-trace);
+    border-radius: var(--border-radius);
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.25rem 0.6rem;
+    line-height: 1;
+    transition: all 0.3s ease;
+}
+
+#hamburger-menu:hover {
+    background-color: var(--color-glow);
+    border-color: var(--color-accent);
+}
+
+/* Mensajes de validacion del formulario */
+
+.form-message {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.8rem;
+    font-family: var(--font-main);
+}
+
+/* Mensaje de error: rojo */
+.form-message--error {
+    color: #ff5252;
+}
+
+/* Mensaje de exito: verde */
+.form-message--success {
+    color: var(--color-success);
+    font-weight: 600;
+}
+
+/* Borde rojo en los campos con error */
+.input-error {
+    border-color: #ff5252 !important;
+    box-shadow: 0 0 8px rgba(255, 82, 82, 0.3) !important;
+}
+
+/* Media Query boton hamburguesa en celular */
+
+@media (max-width: 768px) {
+
+    /* Mostrar el boton hamburguesa */
+    #hamburger-menu {
+        display: block;
+        margin: 0 auto 0.5rem auto;  /* Centrado */
+    }
+
+    /*
+       Menu de navegacion colapsado por defecto en celular
+       Se oculta y se muestra con la clase .nav-open
+    */
+    nav ul {
+        display: none;               /* Oculto inicialmente */
+        flex-direction: column;      /* En columna cuando se muestre */
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    /* Cuando el menu esta abierto (clase nav-open), mostrar la lista */
+    nav.nav-open ul {
+        display: flex;
+    }
+
+    /* En celular, el nav no necesita flex sino bloque */
+    nav {
+        text-align: center;
+    }
+}
+
+/* Media Querys Resposividad */
+
+@media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+
+    main {
+        padding: var(--spacing-sm);
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    dl {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    dl dt {
+        text-align: left;
+        border-right: none;
+        border-bottom: 1px solid var(--color-trace);
+        padding-bottom: 0.25rem;
+    }
+
+    body > header {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    body > header h1 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    body > header img {
+        width: 100px;
+        height: 100px;
+    }
+
+    body > header::before,
+    body > header::after {
+        width: 8px;
+        height: 8px;
+    }
+
+    form button {
+        width: 100%;
+    }
+
+    section {
+        margin-bottom: var(--spacing-md);
+    }
+}
+
+/* Efecto sutil de parpadeo */
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    95% { opacity: 0.98; }
+    96% { opacity: 0.95; }
+}
+
+body > header h1 {
+    animation: flicker 6s infinite;
+}
