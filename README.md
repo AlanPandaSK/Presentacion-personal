@@ -1,4 +1,4 @@
-# Portafolio Personal Alan Francisco Sigala Cardona
+# Portafolio Personal     Alan Francisco Sigala Cardona
 
 Proyecto de portafolio profesional desarrollado como parte de la materia de **Programación Web Full Stack** en la Universidad Autónoma de Ciudad Juárez (UACJ).
 
